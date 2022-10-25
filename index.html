@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="scotchApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script> -->
+    <script src="https://code.angularjs.org/1.2.9/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.2.9/angular-route.min.js"></script>
+    <script src="script.js"></script>
+
+    <title>spa-forms-angularjs</title>
+</head>
+<body ng-controller="mainController">
+    
+    <header>
+        <nav class="navbar navbar-dark bg-primary">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand text-success" href="#!">Rutas en Angular JS</a>
+                <a class="navbar-brand text-danger" href="#form">Formulario en Angular JS</a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#home"><i class="fa fa-home"></i> Form</a></li>
+                <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+                <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+
+    <div id="main">
+        <h2 class="text-primary" style="text-align: center">Esta la consideramos la pag Principal</h2>
+        <h4 class="text-secondary" style="text-align: center">Navegar a las 5 rutas del navbar disponibles</h4>
+        <br><br>
+        <h3 class="text-primary">Info tratada con el mainController</h3>
+        {{message}}
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Dato 1</span>
+            <input type="text" ng-model="Dato1" class="form-control" placeholder="Escriba su dato" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Dato 2</span>
+            <input type="text" ng-model="Dato2" class="form-control" placeholder="Escriba su dato" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <br>
+        Have a good day {{mensajeDatos()}} and be happy.
+        <br>
+        <h2 class="text-secondary" style="text-align: center">A continuacion mostramos las pags de las rutas</h2>
+        <h4 class="text-secondary" style="text-align: center">Info tratada con los controladores respectivos a cada ruta</h4>
+        <br>
+        <div ng-view></div>
+    </div>
+
+</body>
+</html>

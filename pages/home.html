@@ -1,0 +1,52 @@
+<div class="jumbotron text-center">
+    <h1>Pag. Form</h1>
+    <h2>Primer Contenido</h2>
+    <p>{{ message }}</p>
+    <br><br>
+</div>
+<h3 class="text-center">Un ejemplo de formulario</h3>
+<div style="width: 250px; margin: 0 auto">
+    <form action="">
+        <div class="form-floating">
+            <input type="text" ng-model="nombre" class="form-control" id="floatingInput" placeholder="Escriba su nombre">
+            <label for="floatingInput">Nombre</label>
+        </div>
+        <div class="form-floating">
+            <input type="text" ng-model="apellido" class="form-control" id="floatingInput" placeholder="Escriba su apellido">
+            <label for="floatingInput">Apellido</label>
+        </div>
+        <div class="form-floating">
+            <input type="text" ng-model="solicitud" class="form-control" id="floatingInput" placeholder="Solicitud">
+            <label for="floatingInput">Solicitud</label>
+        </div>
+        <label for="">Cargo o Rol</label>
+        <select ng-model="myVar">
+            <option value="">
+            <option value="estudiante">Estudiante
+            <option value="profesor">Profesor
+            <option value="directivo">Directivo
+        </select>
+    </form>
+</div>
+<br>
+<h2 class="text-primary">Buen dia senor:</h2>
+<h4>{{nombre}} {{apellido}}</h4>
+<br>
+<br>
+<h2 class="text-primary">Con solicitud de:</h2>
+<h4>{{solicitud}}</h4>
+<br>
+<br>
+<h2 class="text-primary">Y Rol de:</h2>
+    <div ng-switch="myVar">
+        <div ng-switch-when="estudiante">
+        <h3>Estudiante</h3>
+        </div>
+        <div ng-switch-when="profesor">
+        <h3>Profesor</h3>
+        </div>
+        <div ng-switch-when="directivo">
+        <h3>Directivo</h3>
+        </div>
+    </div>
+<br>
